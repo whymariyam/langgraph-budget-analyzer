@@ -68,5 +68,5 @@ python3 main.py
 
 ```
 
-
+Write your budget and click Enter to track how much balance you've remaining after your paid invoices.
 
