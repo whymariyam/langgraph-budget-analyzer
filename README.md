@@ -16,10 +16,10 @@ It uses a **LangGraph** agent to extract financial metrics from markdown invoice
 
 Before starting, ensure you have the following installed:
 
-Python 3.10+
-PostgreSQL 14+ (running locally or via a cloud provider)
-pip and venv
-An OpenRouter account and API key
+• Python 3.10+
+• PostgreSQL 14+ (running locally or via a cloud provider)
+• pip and venv
+• An OpenRouter account and API key
 
 ## Installation
 
