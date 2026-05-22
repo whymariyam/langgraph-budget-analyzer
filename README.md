@@ -25,7 +25,7 @@ Before starting, ensure you have the following installed:
 
 Clone the repository, Create and Activate a Virtual Environment (Ubuntu)
 ```bash
-git clone https://github.com/whymariyam/langgraph-budget-analyzer.git
+git clone https://github.com/mariyamhere/langgraph-budget-analyzer.git
 cd langgraph-budget-analyzer
 python3 -m venv venv
 source venv/bin/activate
