@@ -4,3 +4,21 @@ I made this automated budget analyzer to help me track my expenses. To use this,
 
 It uses LangGraph agents to extract financial metrics from markdown invoices into PostgreSQL with concurrent LLM processing and performance tracking.
 
+# Prerequisites
+
+Before starting, ensure you have the following installed:
+
+Python 3.10+
+PostgreSQL 14+ (running locally or via a cloud provider)
+pip and venv
+An OpenRouter account and API key
+
+# Installation
+
+Clone the repository, Create and Activate a Virtual Environment (Ubuntu)
+```bash
+git clone https://github.com/whymariyam/langgraph-budget-analyzer.git
+cd langgraph-budget-analyzer
+bashpython -m venv venv
+source venv/bin/activate
+```
