@@ -4,6 +4,8 @@ I made this automated budget analyzer to help me track my expenses. To use this,
 
 It uses **LangChain** for LLM management and a **LangGraph** agent to extract financial metrics from markdown invoices into **PostgreSQL** with **concurrent LLM processing** and expense visualization through **Matplotlib**.
 
+PostgreSQL retains the relational db format which made it supr easy to maintain the tabular form our markdown files had. 
+
 ## Visual
 
 ![Alt text description](budget_chart.png)
@@ -68,4 +70,6 @@ python3 main.py
 ```
 
 Write your budget and click Enter to see your most expensive purchases and track how much balance you've remaining after your paid invoices.
+
+Read main.py: psycopg2 connections themselves are not entirely thread-safe to share across multiple concurrent workers, so opening a fresh connection per thread is a safe approach. Although opening and closing physical database connections over and over inside a threaded loop adds connection overhead and can hit database connection limits if your worker count grows. If you scale max_workers beyond 10, you'll want to swap that out for a thread-safe connection pool (like psycopg2.pool.ThreadedConnectionPool).
 
