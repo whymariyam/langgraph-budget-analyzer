@@ -23,10 +23,10 @@ I made this automated budget analyzer to help me track my expenses. To use this,
 
 Before starting, ensure you have the following installed:
 
-• Python 3.10+
-• PostgreSQL 14+ (running locally or via a cloud provider)
-• pip and venv
-• An OpenRouter account and API key
+- Python 3.10+
+- PostgreSQL 14+ (running locally or via a cloud provider)
+- pip and venv
+- An OpenRouter account and API key
 
 ## Installation
 
