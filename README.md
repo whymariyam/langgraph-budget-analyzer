@@ -2,9 +2,14 @@
 
 I made this automated budget analyzer to help me track my expenses. To use this, you add all your yearly expense invoices in the pdf_invoices folder. It prompts you to add your yearly budget in the terminal and then it tells you how much of your monthly budget you've exhausted (also with a cool chart) and which your top paid vendors are this year.
 
-It uses **LangChain** for LLM management and a **LangGraph** agent to extract financial metrics from markdown invoices into **PostgreSQL** with **concurrent LLM processing** and expense visualization through **Matplotlib**.
+## It Uses
+**LangChain** for LLM management and a **LangGraph** agent to extract financial metrics from markdown invoices into **PostgreSQL** with **concurrent LLM processing** and expense visualization through **Matplotlib**.
 
-PostgreSQL retains the relational db format which made it supr easy to maintain the tabular form our markdown files had. When you use different LLM providers, managing keys become a hassle. OpenRouter is one unified platform making it easier for you. And it even got some models offering free tiers for rapid testing.
+## What Helped
+
+- PostgreSQL retains the relational db format which made it super easy to maintain the tabular form our markdown files had.
+- When you use different LLM providers, managing keys becomes a hassle. OpenRouter is one unified platform making it easier for you. And it even got some models offering free tiers for rapid testing.
+- psycopg2 connections themselves are not entirely thread-safe to share across multiple concurrent workers, so opening a fresh connection per thread is a safe approach. Although opening and closing physical database connections over and over inside a threaded loop adds connection overhead and can hit database connection limits if your worker count grows. If you scale max_workers beyond 10, you'll want to swap that out for a thread-safe connection pool (like psycopg2.pool.ThreadedConnectionPool).
 
 ## Visual
 
@@ -70,6 +75,4 @@ python3 main.py
 ```
 
 Write your budget and click Enter to see your most expensive purchases and track how much balance you've remaining after your paid invoices.
-
-Read main.py: psycopg2 connections themselves are not entirely thread-safe to share across multiple concurrent workers, so opening a fresh connection per thread is a safe approach. Although opening and closing physical database connections over and over inside a threaded loop adds connection overhead and can hit database connection limits if your worker count grows. If you scale max_workers beyond 10, you'll want to swap that out for a thread-safe connection pool (like psycopg2.pool.ThreadedConnectionPool).
 
