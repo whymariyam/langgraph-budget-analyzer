@@ -4,7 +4,7 @@ I made this automated budget analyzer to help me track my expenses. To use this,
 
 It uses **LangChain** for LLM management and a **LangGraph** agent to extract financial metrics from markdown invoices into **PostgreSQL** with **concurrent LLM processing** and expense visualization through **Matplotlib**.
 
-PostgreSQL retains the relational db format which made it supr easy to maintain the tabular form our markdown files had. 
+PostgreSQL retains the relational db format which made it supr easy to maintain the tabular form our markdown files had. When you use different LLM providers, managing keys become a hassle. OpenRouter is one unified platform making it easier for you. And it even got some models offering free tiers for rapid testing.
 
 ## Visual
 
