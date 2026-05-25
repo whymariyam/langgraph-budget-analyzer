@@ -15,7 +15,9 @@ I made this automated budget analyzer to help me track my expenses. To use this,
 
 ![Alt text description](budget_chart.png)
 
-## Final Output
+## What You See on the Terminal
+
+After cloning this repo, installing dependencies and adding your PDF invoices, it will prompt your budget and click Enter to see your most expensive purchases and track how much balance you've remaining after your paid invoices.
 
 ![Alt text description](terminal_output.png)
 
@@ -73,8 +75,4 @@ python3 main.py
 #make sure you're in the respective directory
 
 ```
-
-## What You See on the Terminal
-
-Write your budget and click Enter to see your most expensive purchases and track how much balance you've remaining after your paid invoices.
 
